@@ -1,0 +1,134 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "viragbolt_martondavidstefan",
+    "collectionId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+    "dateExported": "2025-01-29T10:29:25.103Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d593cbf3-0da1-4dc2-9a6b-f0a36c6d6588",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág törlése nem létező id-vel",
+            "url": "localhost:8000/api/flowers/1111",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-01-29T10:28:08.997Z",
+            "modified": "2025-01-29T10:28:08.997Z",
+            "headers": []
+        },
+        {
+            "_id": "3443588d-34a3-43a1-a772-aa63c7ac2667",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág törlése",
+            "url": "localhost:8000/api/flowers/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-01-29T10:28:12.325Z",
+            "modified": "2025-01-29T10:28:12.325Z",
+            "headers": []
+        },
+        {
+            "_id": "a97fb3d1-65d4-490f-98d5-4c203c676614",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág frissítése",
+            "url": "localhost:8000/api/flowers/8",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-01-29T10:28:15.309Z",
+            "modified": "2025-01-29T10:28:15.309Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nev\" : \"putvirag\",\n  \"leiras\" : \"putviragleiras\",\n  \"keszlet\" : 100,\n  \"ar\" : 666\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1662b4b0-2ab3-4ad6-aff5-ba0a84ea2542",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág lekérdezése létező id-vel",
+            "url": "localhost:8000/api/flowers/2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-01-29T10:28:19.533Z",
+            "modified": "2025-01-29T10:28:19.533Z",
+            "headers": []
+        },
+        {
+            "_id": "0560b75c-6ec7-477d-bf00-896b8bb7dabb",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "új virág hozzáadása",
+            "url": "localhost:8000/api/flowers",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2025-01-29T10:28:22.638Z",
+            "modified": "2025-01-29T10:28:22.638Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nev\": \"tesztnev\",\n  \"kategoriaId\" : 1,\n  \"leiras\" : \"tesztleiras\",\n  \"keszlet\" : 10,\n  \"ar\" : 360,\n  \"kepUrl\" : \"teszturl\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3993846a-827a-4e71-b46e-07700341c4b1",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág lekérdezése nem létező id-vel",
+            "url": "localhost:8000/api/flowers/1111",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-01-29T10:28:25.861Z",
+            "modified": "2025-01-29T10:28:25.861Z",
+            "headers": []
+        },
+        {
+            "_id": "d0aa8ddc-8649-420f-9d37-8059051eb70c",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virágok lekérdezése",
+            "url": "localhost:8000/api/flowers",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2025-01-29T10:28:29.470Z",
+            "modified": "2025-01-29T10:28:29.470Z",
+            "headers": []
+        },
+        {
+            "_id": "58565ab8-72ee-41a2-8425-9adef5f985b8",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "virág frissítése nem létező id-vel",
+            "url": "localhost:8000/api/flowers/1111",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2025-01-29T10:28:34.934Z",
+            "modified": "2025-01-29T10:28:34.934Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nev\" : \"putvirag\",\n  \"leiras\" : \"putviragleiras\",\n  \"keszlet\" : 100,\n  \"ar\" : 666\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ae8a94c5-d5c8-4f18-b77a-80160b4056d2",
+            "colId": "fb28323c-0c1a-4397-8524-b6ba48270ffa",
+            "containerId": "",
+            "name": "kategóriák lekérdezése",
+            "url": "localhost:8000/api/categories",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2025-01-29T10:28:38.478Z",
+            "modified": "2025-01-29T10:28:38.478Z",
+            "headers": []
+        }
+    ],
+    "ref": "Oe3AvscXDYI55nTe_jCQ1RMSXwbWvu30MFcfXQGbnVHR5olkNLIEmUXeQT3fDj0908BjdRVSz4xoSg6w6O7mwg"
+}
