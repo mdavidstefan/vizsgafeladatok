@@ -32,7 +32,7 @@ app.get('/api/flowers/:id', async (req, response) => {
         const sql = "select aruk.id, aruk.nev, aruk.leiras, aruk.keszlet, aruk.ar, aruk.kepUrl, kategoriak.nev as 'kategoria' from aruk, kategoriak WHERE aruk.kategoriaId = kategoriak.id AND aruk.id = ?"
         const values = [id]
         const [rows, fields] = await connection.query(sql, values)
-        rows.length == 0 ? response.status(404).json({msg: "A virág nem található "}) : response.status(200).send(rows)
+        rows.length == 0 ? response.status(404).json({ msg: "A virág nem található " }) : response.status(200).send(rows)
     } catch (error) {
         console.log(error);
     }
@@ -57,14 +57,14 @@ app.put('/api/flowers/:id', async (req, response) => {
         const sql = "update aruk set nev = ?, leiras = ?, keszlet = ?, ar = ? where id = ?"
         const values = [nev, leiras, keszlet, ar, id]
         const [rows, fields] = await connection.query(sql, values)
-        rows.affectedRows == 0 ? response.status(404).json({msg: "Az adott azonosítóval nem található termék!"}) : response.status(200).json({msg: "Sikeres módosítás!"})
+        rows.affectedRows == 0 ? response.status(404).json({ msg: "Az adott azonosítóval nem található termék!" }) : response.status(200).json({ msg: "Sikeres módosítás!" })
     } catch (error) {
         console.log(error);
     }
 })
 
 app.delete('/api/flowers/:id', async (req, response) => {
-    const {id} = req.params
+    const { id } = req.params
     try {
         const sql = "delete from aruk where id = ?"
         const values = [id]
