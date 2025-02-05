@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ingatlanügynökség</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <h2 class="section-title">Aktuális ajánlataink</h2>
+
+            <div class="listings-container">
+
+                <div class="listing-card">
+                    <div class="card-header">
+                        <span class="title">Ház</span>
+                        <span class="date">2022-02-24</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Kertvárosi részén, egyszintes házat kínálunk nyugodt környezetben, nagy telken.</p>
+                    </div>
+                    <img class="card-image"
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354146/houses/h1_nxj9wb.jpg"
+                        alt="Ház">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="card-header">
+                        <span class="title">Ház</span>
+                        <span class="date">2022-01-12</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Belvárosi környezetben, árnyékos helyen kis méretű családi ház eladó.</p>
+                    </div>
+                    <img class="card-image"
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354147/houses/h3_ofo7nt.jpg"
+                        alt="Ház">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="listing-card">
+                    <div class="card-header">
+
+                        <span class="title">Ház</span>
+                        <span class="date">2022-01-12</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Belvárosi környezetben, árnyékos helyen kis méretú családi ház eladó. Tömegközlekedéssel
+                            könnyen megközelíthető.
+                        </p>
+                    </div>
+                    <img class="card-image" alt=""
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354148/houses/h2_fj3wlf.jpg">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+
+                </div>
+
+                <div class="listing-card">
+
+                    <div class="card-header">
+                        <span class="title">Garázs</span>
+                        <span class="date">2022-02-27</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Nagy garázs kertvárosi környezetben kiadó.
+                        </p>
+                    </div>
+                    <img class="card-image" alt=""
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354150/houses/h4_ydvilw.jpg">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+
+                </div>
+
+                <div class="listing-card">
+
+                    <div class="card-header">
+                        <span class="title">Mezőgazdasági terület</span>
+                        <span class="date">2022-01-31</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            10 hektáros mezőhazdasági terület eladó.
+                        </p>
+                    </div>
+                    <img class="card-image" alt=""
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354147/houses/h5_huwhrm.jpg">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+
+                </div>
+
+                <div class="listing-card">
+                    <div class="card-header">
+                        <span class="title">Ipari ingatlan</span>
+                        <span class="date">2022-01-12</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Felújításra szoruló üzemcsarnok zöld környezetben áron alul eladó.
+                        </p>
+                    </div>
+                    <img class="card-image" alt=""
+                        src="https://res.cloudinary.com/myblog2024/image/upload/v1738354150/houses/h6_vb62no.jpg">
+                    <div class="card-footer">
+                        <button class="btn " popovertarget="contactFormPopup">Érdekel</button>
+                    </div>
+                </div>
+
+                <!-- Popover Contact Form -->
+                <div id="contactFormPopup" popover>
+                    <div class="popover-content">
+                        <h3>Kapcsolatfelvétel</h3>
+                        <form id="contactForm">
+                            <label for="name">Név:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Üzenet:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <button class="btn" type="submit">Küldés</button>
+                        </form>
+                        <button class="close-btn" popovertarget="contactFormPopup"
+                            popovertargetaction="hide">Bezárás</button>
+                    </div>
+                </div>
+
+
+            </div>
+    </body>
+
+</html>
