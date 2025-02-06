@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/api/property', async (req, response) => {
+app.get('/api/property', async (request, response) => {
     try {
         const sql = "select ingatlanok.id, leiras, hirdetesDatuma, tehermentes, ar, kepUrl, kategoriak.nev as kategNev from ingatlanok join kategoriak on ingatlanok.kategoriaId = kategoriak.id order by ingatlanok.id"
         const [rows, fields] = await connection.query(sql)
@@ -25,8 +25,8 @@ app.get('/api/property', async (req, response) => {
     }
 })
 
-app.get('/api/property/:id', async (req, response) => {
-    const { id } = req.params;
+app.get('/api/property/:id', async (request, response) => {
+    const { id } = request.params;
     try {
         const sql = "select ingatlanok.id, leiras, hirdetesDatuma, tehermentes, ar, kepUrl, kategoriak.nev as kategNev from ingatlanok join kategoriak on ingatlanok.kategoriaId = kategoriak.id where ingatlanok.id = ? order by ingatlanok.id"
         const values = [id]
@@ -37,8 +37,8 @@ app.get('/api/property/:id', async (req, response) => {
     }
 })
 
-app.post('/api/property', async (req, response) => {
-    const { kategoriaId, leiras, hirdetesDatuma, tehermentes, ar, kepUrl } = req.body;
+app.post('/api/property', async (request, response) => {
+    const { kategoriaId, leiras, hirdetesDatuma, tehermentes, ar, kepUrl } = request.body;
     try {
         const sql = "insert into ingatlanok values (?, ?, ?, ?, ?, ?, ?)"
         const values = [null, kategoriaId, leiras, hirdetesDatuma, tehermentes, ar, kepUrl]
@@ -50,11 +50,11 @@ app.post('/api/property', async (req, response) => {
     }
 })
 
-app.put('/api/property/:id', async (req, response) => {
-    const { id } = req.params
-    const { leiras, ar } = req.body;
+app.put('/api/property/:id', async (request, response) => {
+    const { id } = request.params
+    const { leiras, ar } = request.body;
     try {
-        const sql = "update ingatlanok set leiras = ?, ar = ? where ingatlanok.id = ?"
+        const sql = "update ingatlanok set leiras = ?, ar = ? where id = ?"
         const values = [leiras, ar, id]
         const [rows, fields] = await connection.query(sql, values)
         rows.affectedRows == 0 ? response.status(404).json({ msg: "Az adott azonosítóval nem található ingatlan! " }) : response.status(200).json({ msg: "Sikeres módosítás!" })
@@ -63,10 +63,10 @@ app.put('/api/property/:id', async (req, response) => {
     }
 })
 
-app.delete('api/property/:id', async (req, response) => {
-    const { id } = req.params;
+app.delete('/api/property/:id', async (request, response) => {
+    const { id } = request.params;
     try {
-        const sql = "delete from ingatlanok where ingatlanok.id = ?"
+        const sql = "delete from ingatlanok where id = ?"
         const values = [id]
         const [rows, fields] = await connection.query(sql, values)
         rows.affectedRows == 0 ? response.status(404).json({ msg: "Az ingatlan nem található " }) : response.status(200).json({ msg: "Sikeres törlés!" })
@@ -75,9 +75,9 @@ app.delete('api/property/:id', async (req, response) => {
     }
 })
 
-app.get('api/categories', async (req, response) => {
+app.get('/api/categories', async (request, response) => {
     try {
-        const sql = "select kategoriak.nev from kategoriak"
+        const sql = "select * from kategoriak"
         const [rows, fields] = await connection.query(sql)
         response.status(200).send(rows)
     } catch (error) {

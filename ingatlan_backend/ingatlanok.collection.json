@@ -1,0 +1,122 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ingatlanok_martondavidstefan",
+    "collectionId": "3debf602-0425-4d3e-8558-3215122b887b",
+    "dateExported": "2025-02-06T10:28:04.352Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "faf7bb31-008b-4198-9edb-a0493469c28a",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "ingatlanok lekérdezése",
+            "url": "localhost:8000/api/property",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-05T11:03:04.052Z",
+            "modified": "2025-02-05T11:03:04.052Z",
+            "headers": []
+        },
+        {
+            "_id": "4bf687f4-e4ca-4c0f-9498-2b8424b2c171",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "egy ingatlan lekérdezése",
+            "url": "localhost:8000/api/property/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-05T11:18:08.130Z",
+            "modified": "2025-02-05T11:18:08.130Z",
+            "headers": []
+        },
+        {
+            "_id": "54b2cdae-6757-47d9-ba14-aa1561a16d07",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "egy ingatlan lekérdezése nemlétező id-vel",
+            "url": "localhost:8000/api/property/1111",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-05T11:18:13.258Z",
+            "modified": "2025-02-05T11:18:13.258Z",
+            "headers": []
+        },
+        {
+            "_id": "71503c6d-5e6d-4b33-9107-cd83de63c721",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "új ingatlan hozzáaadása",
+            "url": "localhost:8000/api/property",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-05T11:25:57.122Z",
+            "modified": "2025-02-05T11:25:57.122Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"kategoriaId\": 2,\n  \"leiras\": \"tesztleírás\",\n  \"hirdetesDatuma\": \"2025-02-5\",\n  \"tehermentes\": 1,\n  \"ar\": 3000,\n  \"kepUrl\": \"teszturl\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9e32a750-6e92-457c-9139-fe2dbc811996",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "ingatlan frissítése nemlétező id esetén",
+            "url": "localhost:8000/api/property/1111",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-05T11:32:28.698Z",
+            "modified": "2025-02-05T11:32:28.698Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"leiras\": \"putleiras\",\n  \"ar\": 999\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c619e85b-05e7-4e39-9e4e-0bee7661723d",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "ingatlan frissítése",
+            "url": "localhost:8000/api/property/1",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2025-02-05T11:32:32.114Z",
+            "modified": "2025-02-05T11:32:32.114Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"leiras\": \"putleiras\",\n  \"ar\": 999\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "173ee464-cb5d-4a89-b351-d50584e52427",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "ingatlan törlése",
+            "url": "localhost:8000/api/property/8",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2025-02-06T10:26:54.400Z",
+            "modified": "2025-02-06T10:26:54.400Z",
+            "headers": []
+        },
+        {
+            "_id": "a737361c-d34e-405f-9fd3-a52a04f6c4b9",
+            "colId": "3debf602-0425-4d3e-8558-3215122b887b",
+            "containerId": "",
+            "name": "kategóriák lekérdezése",
+            "url": "localhost:8000/api/categories",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-02-06T10:27:49.671Z",
+            "modified": "2025-02-06T10:27:49.671Z",
+            "headers": []
+        }
+    ],
+    "ref": "OSYAhEfR6F1gOcdzCUArvv5tYGwMeVxV0HtIOu--DvCPSuJ4pT7NbQATZlO1vnw67vQTJPeQjDGUuiO2PWtpJw"
+}

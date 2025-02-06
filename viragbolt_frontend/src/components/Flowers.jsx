@@ -10,9 +10,9 @@ export const Flowers = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate()
 
-    useEffect(() => {
-        getData(url, setProducts)
-    }, [])
+        useEffect(() => {
+            getData(url, setProducts)
+        }, [])
 
     products && console.log(products);
 

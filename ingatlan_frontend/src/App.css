@@ -5,7 +5,7 @@ body {
 }
 
 .container {
- 
+
   min-height: 100vh;
   background-image: url('house.jpg');
   background-size: cover;
@@ -18,21 +18,33 @@ body {
   text-align: center;
 }
 
-.container.offers{
-  background: rgb(1,50,32);
-  background: linear-gradient(159deg, rgba(1,50,32,0.8) 0%, rgba(57,255,20,1) 100%);
-  
+.container.offers {
+  background: rgb(1, 50, 32);
+  background: linear-gradient(159deg, rgba(1, 50, 32, 0.8) 0%, rgba(57, 255, 20, 1) 100%);
+
 }
-.title, .section-title {
+
+.title,
+.section-title {
   margin-top: 1rem;
   font-size: 3rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.house{
+
+i {
   position: fixed;
-  top:10px;
-  left:10px;    
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.house {
+  position: fixed;
+  top: 10px;
+  left: 10px;
   font-size: 2rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -47,7 +59,7 @@ body {
 }
 
 .btn {
-  background-color: rgba(93, 50, 4,0.7);
+  background-color: rgba(93, 50, 4, 0.7);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -60,7 +72,7 @@ body {
 }
 
 .btn:hover {
-  background-color:  rgb(93, 50, 4);
+  background-color: rgb(93, 50, 4);
   transform: scale(1.05);
 }
 
@@ -69,13 +81,17 @@ body {
   text-decoration: none;
 }
 
-@media screen and (max-width:500px){
-  .title, .section-title, i{
-      font-size: 1.5rem;
+@media screen and (max-width:500px) {
+
+  .title,
+  .section-title,
+  i {
+    font-size: 1.5rem;
   }
-  
-  
+
+
 }
+
 /***offer.html*****************/
 
 .listings-container {
@@ -84,8 +100,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: rgba(249, 249, 249,0.5);
- 
+  background-color: rgba(249, 249, 249, 0.5);
+
 }
 
 .listing-card {
@@ -133,6 +149,7 @@ body {
   padding: 12px;
   background: #f8f9fa;
 }
+
 /**popovber**/
 /* Popover stílusok */
 #contactFormPopup {
@@ -174,7 +191,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
 
   border: 1px solid #ccc;
@@ -187,7 +205,7 @@ input, textarea {
   max-width: 800px;
   margin: 0.5rem auto;
   padding: 10px;
-  background-color: rgba(249, 249, 249,0.8);
+  background-color: rgba(249, 249, 249, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -196,7 +214,7 @@ input, textarea {
   text-align: center;
   font-size: 2rem;
   color: #333;
-  }
+}
 
 .form-container {
   display: flex;
@@ -215,7 +233,8 @@ input, textarea {
   color: #555;
 }
 
-.form-select, .form-control {
+.form-select,
+.form-control {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -224,7 +243,8 @@ input, textarea {
   transition: border-color 0.3s ease;
 }
 
-.form-select:focus, .form-control:focus {
+.form-select:focus,
+.form-control:focus {
   border-color: #28a745;
   outline: none;
 }
