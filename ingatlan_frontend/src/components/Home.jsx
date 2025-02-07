@@ -11,7 +11,7 @@ export const Home = () => {
             <h1 className="title">Ingatlanügynökség</h1>
             <div className="button-container">
                 <a href="#" onClick={() => navigate('/properties')}><button className="btn">Nézze meg kínálatunkat!</button></a>
-                <a href="#" onClick={() => navigate('/property')}><button className="btn">Hirdessen nálunk!</button></a>
+                <a href="#" onClick={() => navigate('/addlisting')}><button className="btn">Hirdessen nálunk!</button></a>
             </div>
         </div>
     )

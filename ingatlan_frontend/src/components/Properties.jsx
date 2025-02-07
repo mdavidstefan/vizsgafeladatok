@@ -18,7 +18,7 @@ export const Properties = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container-l">
                 <a href="#" onClick={() => navigate('/')}><i className="fa-solid fa-house"></i></a>
                 <h2 className="section-title">Aktuális ajánlataink</h2>
 
@@ -33,7 +33,7 @@ export const Properties = () => {
                                 src={ingatlan.kepUrl}
                                 alt={ingatlan.kategNev} />
                             <div className="card-footer">
-                                <button className="btn " popovertarget="contactFormPopup">Részletek</button>
+                                <button className="btn " popovertarget="contactFormPopup" onClick={()=> navigate('/property/' + ingatlan.id)}>Részletek</button>
                             </div>
                         </div>
                     )}
