@@ -15,7 +15,7 @@ export const Order = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        getSingleData(url + id, setProduct)
+        getSingleData(url + id,  setProduct)
     }, [])
 
     useEffect(() => {

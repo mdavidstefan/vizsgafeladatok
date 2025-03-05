@@ -25,7 +25,7 @@ export const Property = () => {
                     <img src={property.kepUrl} alt={property.kategNev} className='propertyImg' />
                     <p>{property.leiras}</p>
                     <h2>Ára: {property.ar} Ft</h2>
-                    <button className="btn" onClick={()=> navigate('/properties')}>Vissza a többi hirdetéshez...</button>
+                    <button className="btn" onClick={() => navigate('/properties')}>Vissza a többi hirdetéshez...</button>
                 </div>
             }
         </div>
